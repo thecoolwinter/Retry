@@ -38,7 +38,9 @@ public func retry<Result, ErrorType: Error>(
     tolerance: Duration? = nil,
     operation: () async throws(ErrorType) -> Result,
 ) async throws -> Result
+```
 
+```swift
 nonisolated(nonsending)
 public func retryIndefinite<Result, ErrorType: Error>(
     backoffFactor: Int = 2,
